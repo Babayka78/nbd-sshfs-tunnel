@@ -1,0 +1,9 @@
+# Mac OS
+.DS_Store
+
+# Logs
+*.log
+/tmp/
+
+# Configuration (keep the .example file, ignore the actual conf)
+tunnel.conf

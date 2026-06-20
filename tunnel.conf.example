@@ -1,0 +1,8 @@
+# NBD-SSHFS Tunnel Configuration
+# Copy this file to tunnel.conf and customize it
+
+# The hostname or IP address of the Linux host
+LINUX_HOST="pi"
+
+# The SSH user on the Linux host
+LINUX_USER="pi"
