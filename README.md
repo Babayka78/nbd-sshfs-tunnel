@@ -107,7 +107,7 @@ Sufficient for everyday tasks: backups, document transfers, media copying. SSHFS
    ssh-copy-id pi    # passwordless login required
    ```
 
-#### Linux Host (Raspberry Pi 4 / Debian 12)
+#### Linux Host (Raspberry Pi 4 / Debian 13)
 
 ```bash
 sudo apt install nbd-client ntfs-3g
@@ -291,7 +291,7 @@ rm -rf /tmp/mount_nbd_disk*.lock
 ## Tested On
 
 - **macOS**: Sequoia 15.7 (Apple Silicon)
-- **Linux Host**: Raspberry Pi 4, Debian 12 (Bookworm) CLI
+- **Linux Host**: Raspberry Pi 4, Debian 13 (Trixie) CLI
 - **nbdkit**: 1.46.1 (built from source)
 - **macFUSE**: 4.x
 - **sshfs-mac**: gromgit/fuse tap
@@ -305,7 +305,10 @@ rm -rf /tmp/mount_nbd_disk*.lock
 
 ## Roadmap
 
-- [ ] Interactive `setup.sh` script (auto-detect path, prompt for host/user, generate and copy SSH key)
+- [ ] Interactive `setup.sh` script:
+  - Auto-detect path, prompt for host/user, generate and copy SSH key.
+  - Automatically generate and install the `launchd` `.plist` agent.
+  - Auto-trigger on launch if `tunnel.conf` is missing or incomplete.
 - [ ] Mount in standard `/Volumes/` path (requires adjusting detector filters)
 - [ ] Multi-drive support (`/dev/nbd0..nbd15`) — concurrent tunneling of 2+ USB drives
 
